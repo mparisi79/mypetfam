@@ -1,0 +1,100 @@
+export const NAV_ITEMS = [
+  {
+    label: 'How It Works',
+    href: '/how-it-works',
+    links: [
+      { label: 'What is the Mars Vet Health Network?', href: '/how-it-works' },
+      { label: 'How care is connected', href: '/how-it-works#connected' },
+      { label: 'How referrals work', href: '/how-it-works#referrals' },
+      { label: 'What to expect as a pet parent', href: '/how-it-works#expect' },
+      { divider: true },
+      { label: 'FAQs', href: '/how-it-works#faqs' },
+      { label: 'Help & Support', href: '/how-it-works#support' },
+    ],
+  },
+  {
+    label: 'Our Brands',
+    href: '/our-brands',
+    links: [
+      { label: 'Mars Veterinary Health', href: '/our-brands' },
+      { label: 'Veterinary Network', href: '/our-brands#network' },
+    ],
+  },
+  {
+    label: 'Connected Care',
+    href: '/connected-care',
+    links: [
+      { label: 'Referral stories', href: '/connected-care#referrals' },
+      { label: 'Doctors as Heroes: Our veterinarians', href: '/connected-care#doctors' },
+      { label: 'Real Pet Care Journeys', href: '/connected-care#journeys' },
+      { label: 'How We Work Together', href: '/connected-care#together' },
+    ],
+  },
+  {
+    label: 'Complete Pet Care',
+    href: '/complete-pet-care',
+    links: [
+      { label: 'Getting Started', href: '/complete-pet-care#getting-started' },
+      { label: 'Staying Healthy', href: '/complete-pet-care#healthy' },
+      { label: 'Ongoing Care Needs', href: '/complete-pet-care#ongoing' },
+      { label: 'Emergency Care', href: '/complete-pet-care#emergency' },
+      { label: 'Specialized Care', href: '/complete-pet-care#specialized' },
+      { label: 'End of Life Care', href: '/complete-pet-care#end-of-life' },
+      { divider: true },
+      { label: 'Nutrition', href: '/complete-pet-care#nutrition' },
+    ],
+  },
+] as const
+
+export const BRANDS = [
+  {
+    id: 'banfield',
+    name: 'Banfield',
+    tagline: 'Preventive care for every stage of life',
+    description: '1,000+ locations. Optimum Wellness Plans®, virtual visits, and Pet Chat™ 24/7. Your partner for proactive pet health.',
+    image: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fbrands_banfield_image_v2.png&w=2048&q=85',
+    logo: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fbanfield-tab-logo.png&w=640&q=85',
+    cta: 'Find a Banfield',
+    filter: 'banfield',
+    reverse: false,
+  },
+  {
+    id: 'bluepearl',
+    name: 'BluePearl',
+    tagline: 'Specialty and emergency medicine, 24/7',
+    description: 'Nearly 100 hospitals. 20+ specialties. 24/7 emergency care with compassion — and community support through BluePearl Cares.',
+    image: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fbrands_bluepearl_image.png&w=2048&q=85',
+    logo: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fbluepearl-tab-logo.png&w=640&q=85',
+    cta: 'Find a BluePearl',
+    filter: 'blue_pearl',
+    reverse: true,
+  },
+  {
+    id: 'vca',
+    name: 'VCA',
+    tagline: 'Comprehensive care, nationwide',
+    description: "North America's largest veterinary network. 4M+ pets annually. From wellness to emergency — VCA is here for every moment.",
+    image: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOurBrands_VCA_02.png&w=2048&q=85',
+    logo: 'https://www.mypetfam.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fvca-tab-logo.png&w=256&q=85',
+    cta: 'Find a VCA',
+    filter: 'vca',
+    reverse: false,
+  },
+] as const
+
+export const LIFECYCLE_STAGES = [
+  { emoji: '🐣', name: 'New Pet',    desc: 'Wellness & first exams',  href: '/complete-pet-care#getting-started' },
+  { emoji: '💉', name: 'Preventive', desc: 'Vaccines & checkups',     href: '/complete-pet-care#healthy' },
+  { emoji: '🏥', name: 'Primary',    desc: 'Everyday illness & care', href: '/complete-pet-care#ongoing' },
+  { emoji: '📋', name: 'Ongoing',    desc: 'Chronic conditions',      href: '/complete-pet-care#ongoing' },
+  { emoji: '🚨', name: 'Emergency',  desc: '24/7 critical care',      href: '/complete-pet-care#emergency' },
+  { emoji: '⭐', name: 'Specialty',  desc: 'Advanced treatment',      href: '/complete-pet-care#specialized' },
+  { emoji: '🕊️', name: 'End of Life', desc: 'Hospice & comfort',     href: '/complete-pet-care#end-of-life' },
+] as const
+
+export const SEARCH_DATA = [
+  { icon: '🚨', title: 'Emergency Care',         sub: 'Immediate, life-saving treatment',            href: '/find-care' },
+  { icon: '💉', title: 'Preventive & Wellness',  sub: 'Vaccines, checkups, Optimum Wellness Plans®', href: '/find-care' },
+  { icon: '⭐', title: 'Specialty Care',         sub: 'Surgery, oncology, cardiology & more',        href: '/find-care' },
+  { icon: '🏥', title: 'Find a Hospital',        sub: 'Search 2,000+ locations near you',            href: '/find-care' },
+  { icon: '🐾', title: 'Banfield Pet Hospital',  sub: 'Preventive care
