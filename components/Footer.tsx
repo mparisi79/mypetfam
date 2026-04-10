@@ -14,14 +14,7 @@ export default function Footer() {
               height={32}
               className="h-8 w-auto mb-4 brightness-0 invert"
               unoptimized
-              onError={(e) => {
-                const t = e.target as HTMLImageElement
-                t.style.display = 'none'
-                const fb = t.nextElementSibling as HTMLElement
-                if (fb) fb.style.display = 'block'
-              }}
             />
-            <span className="hidden font-serif font-bold text-xl text-white block mb-4">MyPetfam</span>
             <p className="text-sm leading-relaxed max-w-[260px]">
               A platform connecting pet owners with trusted veterinary care across the Mars Veterinary Health network.
             </p>
