@@ -97,4 +97,11 @@ export const SEARCH_DATA = [
   { icon: '💉', title: 'Preventive & Wellness',  sub: 'Vaccines, checkups, Optimum Wellness Plans®', href: '/find-care' },
   { icon: '⭐', title: 'Specialty Care',         sub: 'Surgery, oncology, cardiology & more',        href: '/find-care' },
   { icon: '🏥', title: 'Find a Hospital',        sub: 'Search 2,000+ locations near you',            href: '/find-care' },
-  { icon: '🐾', title: 'Banfield Pet Hospital',  sub: 'Preventive care
+  { icon: '🐾', title: 'Banfield Pet Hospital',  sub: 'Preventive care & wellness plans',            href: '/our-brands' },
+  { icon: '💙', title: 'BluePearl Pet Hospital', sub: 'Emergency & specialty, 24/7',                 href: '/our-brands' },
+  { icon: '🔴', title: 'VCA Animal Hospitals',   sub: 'Comprehensive care, nationwide',              href: '/our-brands' },
+  { icon: '🔗', title: 'How Referrals Work',     sub: 'Connected care across our network',           href: '/how-it-works#referrals' },
+  { icon: '🕊️', title: 'End of Life Care',      sub: 'Hospice & compassionate support',             href: '/complete-pet-care#end-of-life' },
+  { icon: '🥩', title: 'Nutrition',              sub: 'Royal Canin partnership & diet guidance',     href: '/complete-pet-care#nutrition' },
+  { icon: '❓', title: 'FAQs & Support',         sub: 'Common pet care questions answered',          href: '/how-it-works#faqs' },
+] as const
