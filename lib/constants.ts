@@ -19,7 +19,7 @@ export const NAV_ITEMS = [
       { label: 'Mars Veterinary Health', href: '/our-brands' },
       { label: 'Veterinary Network', href: '/our-brands#network' },
       { divider: true },
-      { label: 'Nutrition', href: '/complete-pet-care#nutrition' },
+      { label: 'Nutrition', href: '/nutrition' },
     ],
   },
   {
@@ -102,6 +102,6 @@ export const SEARCH_DATA = [
   { icon: '🔴', title: 'VCA Animal Hospitals',   sub: 'Comprehensive care, nationwide',              href: '/our-brands' },
   { icon: '🔗', title: 'How Referrals Work',     sub: 'Connected care across our network',           href: '/how-it-works#referrals' },
   { icon: '🕊️', title: 'End of Life Care',      sub: 'Hospice & compassionate support',             href: '/complete-pet-care#end-of-life' },
-  { icon: '🥩', title: 'Nutrition',              sub: 'Royal Canin partnership & diet guidance',     href: '/complete-pet-care#nutrition' },
+  { icon: '🥩', title: 'Nutrition',              sub: 'Royal Canin partnership & diet guidance',     href: '/nutrition' },
   { icon: '❓', title: 'FAQs & Support',         sub: 'Common pet care questions answered',          href: '/how-it-works#faqs' },
 ] as const
