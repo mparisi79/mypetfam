@@ -18,6 +18,8 @@ export const NAV_ITEMS = [
     links: [
       { label: 'Mars Veterinary Health', href: '/our-brands' },
       { label: 'Veterinary Network', href: '/our-brands#network' },
+      { divider: true },
+      { label: 'Nutrition', href: '/complete-pet-care#nutrition' },
     ],
   },
   {
@@ -40,8 +42,6 @@ export const NAV_ITEMS = [
       { label: 'Emergency Care', href: '/complete-pet-care#emergency' },
       { label: 'Specialized Care', href: '/complete-pet-care#specialized' },
       { label: 'End of Life Care', href: '/complete-pet-care#end-of-life' },
-      { divider: true },
-      { label: 'Nutrition', href: '/complete-pet-care#nutrition' },
     ],
   },
 ] as const
