@@ -3,6 +3,11 @@ export type ServiceDetailItem = {
   desc: string
 }
 
+export type ServiceCluster = {
+  name: string
+  items: readonly ServiceDetailItem[]
+}
+
 export type ServiceTier = {
   id: string
   emoji: string
@@ -17,6 +22,7 @@ export type ServiceTier = {
   whenToUse?: readonly string[]
   includesIntro?: string
   includes?: readonly ServiceDetailItem[]
+  clusters?: readonly ServiceCluster[]
   note?: string
 }
 
@@ -150,31 +156,113 @@ export const SERVICE_GROUPS: readonly ServiceGroup[] = [
         summary: ['Surgery', 'Oncology', 'Cardiology'],
         whatItIs:
           'Specialty care comes from veterinarians with years of additional training in a single discipline — similar to how a cardiologist in human medicine has trained beyond a general practitioner. Specialists see the rare, complex, and serious cases your primary vet refers to them.',
-        includesIntro: 'The most common specialties include:',
-        includes: [
+        includesIntro:
+          'Our network spans the full range of veterinary specialties, organized by the area of the body or type of care:',
+        clusters: [
           {
-            label: 'Surgery',
-            desc: 'Complex procedures beyond routine — orthopedic repair (like ACL injuries), soft tissue surgery, minimally invasive techniques, and reconstructive work.',
+            name: 'Internal systems',
+            items: [
+              {
+                label: 'Cardiology',
+                desc: 'Heart disease, murmurs, and congestive heart failure.',
+              },
+              {
+                label: 'Internal medicine',
+                desc: 'Complex or chronic illness affecting multiple organs.',
+              },
+              {
+                label: 'Oncology',
+                desc: 'Cancer diagnosis, chemotherapy, and treatment planning.',
+              },
+              {
+                label: 'Nephrology & urology',
+                desc: 'Kidney disease and urinary tract conditions.',
+              },
+              {
+                label: 'Endocrinology',
+                desc: 'Diabetes, thyroid, and hormonal disorders.',
+              },
+            ],
           },
           {
-            label: 'Oncology',
-            desc: 'Diagnosing and treating cancer in pets. Treatment plans may include chemotherapy, radiation, or surgery, with a strong focus on quality of life throughout.',
+            name: 'Surgery & recovery',
+            items: [
+              {
+                label: 'Surgery — soft tissue',
+                desc: 'Abdominal, thoracic, and reconstructive procedures.',
+              },
+              {
+                label: 'Surgery — orthopedic',
+                desc: 'Fracture repair, joint replacement, and spinal surgery.',
+              },
+              {
+                label: 'Anesthesiology',
+                desc: 'Tailored anesthesia plans for high-risk patients.',
+              },
+              {
+                label: 'Critical care',
+                desc: '24/7 intensive monitoring and stabilization.',
+              },
+              {
+                label: 'Rehabilitation',
+                desc: 'Physical therapy and hydrotherapy for recovery.',
+              },
+            ],
           },
           {
-            label: 'Cardiology',
-            desc: 'Heart and circulatory system conditions — murmurs, arrhythmias, congenital defects, and heart failure. Diagnosis typically involves echocardiograms and specialized imaging.',
+            name: 'Diagnostics & imaging',
+            items: [
+              {
+                label: 'Diagnostic imaging',
+                desc: 'MRI, CT, and ultrasound interpretation.',
+              },
+              {
+                label: 'Interventional radiology',
+                desc: 'Minimally invasive image-guided procedures.',
+              },
+              {
+                label: 'Clinical pathology',
+                desc: 'Advanced lab analysis and tissue diagnostics.',
+              },
+              {
+                label: 'Nuclear medicine',
+                desc: 'Specialized scans for hard-to-diagnose conditions.',
+              },
+            ],
           },
           {
-            label: 'Neurology',
-            desc: 'Problems affecting the brain, spinal cord, and nerves — seizures, unexplained weakness, spinal injuries, and neurological pain.',
+            name: 'Senses, skin & dental',
+            items: [
+              {
+                label: 'Ophthalmology',
+                desc: 'Eye disease, surgery, and vision care.',
+              },
+              {
+                label: 'Dermatology',
+                desc: 'Chronic skin, ear, and allergy conditions.',
+              },
+              {
+                label: 'Dentistry & oral surgery',
+                desc: 'Advanced dental and maxillofacial care.',
+              },
+            ],
           },
           {
-            label: 'Dermatology',
-            desc: "Chronic skin and ear conditions that haven't responded to routine treatment, including severe allergies and autoimmune skin diseases.",
-          },
-          {
-            label: 'Internal medicine',
-            desc: "Complex, systemic illnesses that don't have an obvious diagnosis — often the go-to specialty when a pet is sick in ways that cross multiple body systems.",
+            name: 'Neurology & behavior',
+            items: [
+              {
+                label: 'Neurology',
+                desc: 'Seizures, spine, and nerve disorders.',
+              },
+              {
+                label: 'Neurosurgery',
+                desc: 'Brain and spinal cord surgery.',
+              },
+              {
+                label: 'Behavior',
+                desc: 'Anxiety, aggression, and compulsive disorders.',
+              },
+            ],
           },
         ],
         note: "You typically reach a specialist through a referral from your primary vet. Within our network, the specialist already has your pet's full medical history before you arrive — no repeating tests or re-explaining what's happened.",
