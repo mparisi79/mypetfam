@@ -15,12 +15,12 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 text-[13px] font-medium tracking-[0.04em] px-4 py-2 rounded-full mb-7 w-fit"
             style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.9)' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--teal-bright)' }} />
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--teal)' }} />
             2,000+ hospitals nationwide
           </div>
           <h1 className="font-serif text-[clamp(40px,5vw,64px)] font-bold text-white leading-[1.1] mb-6">
             Find the right care<br />for your pet.{' '}
-            <em className="not-italic" style={{ color: 'var(--teal-bright)' }}>Fast.</em>
+            <em className="not-italic" style={{ color: 'var(--teal)' }}>Fast.</em>
           </h1>
           <p className="text-lg text-white/70 leading-[1.7] max-w-md mb-10 font-light">
             No matter what kind of care your pet needs, we connect you quickly with a doctor or hospital.
@@ -30,7 +30,7 @@ export default function HomePage() {
             <Link
               href="/find-care"
               className="inline-flex items-center gap-2 text-base font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-0.5"
-              style={{ background: 'var(--teal-bright)', color: 'white' }}
+              style={{ background: 'var(--teal)', color: 'white' }}
             >
               Find care near me →
             </Link>
@@ -115,7 +115,7 @@ export default function HomePage() {
             <p className="text-lg leading-[1.7] font-light" style={{ color: 'rgba(255,255,255,0.6)' }}>From the first puppy exam to compassionate end-of-life support.</p>
           </div>
           <div className="relative flex">
-            <div className="absolute h-0.5 z-0" style={{ top: 40, left: 40, right: 40, background: 'linear-gradient(to right, var(--teal-bright), var(--gold), var(--coral))' }} />
+            <div className="absolute h-0.5 z-0" style={{ top: 40, left: 40, right: 40, background: 'linear-gradient(to right, var(--teal), var(--gold), var(--coral))' }} />
             {LIFECYCLE_STAGES.map((stage) => (
               <Link key={stage.name} href={stage.href} className="flex-1 flex flex-col items-center text-center relative z-10 px-2 group">
                 <div className="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 transition-all group-hover:scale-110" style={{ background: 'rgba(255,255,255,0.08)', border: '2px solid rgba(255,255,255,0.15)' }}>
@@ -127,7 +127,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link href="/complete-pet-care" className="inline-flex items-center gap-2 text-base font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-0.5" style={{ background: 'var(--teal-bright)', color: 'white' }}>
+            <Link href="/complete-pet-care" className="inline-flex items-center gap-2 text-base font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-0.5" style={{ background: 'var(--teal)', color: 'white' }}>
               Explore complete pet care →
             </Link>
           </div>
@@ -163,11 +163,11 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 text-center" style={{ background: 'linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%)' }}>
+      <section className="py-14 text-center" style={{ background: 'linear-gradient(135deg, var(--teal-dark) 0%, var(--navy) 100%)' }}>
         <div className="max-w-7xl mx-auto px-8">
           <h2 className="font-serif text-4xl text-white mb-3">Ready to find care for your pet?</h2>
           <p className="text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>Over 2,000 locations. Three trusted brands. One connected network.</p>
-          <Link href="/find-care" className="inline-flex items-center text-[17px] font-semibold px-9 py-4 rounded-full transition-all hover:-translate-y-0.5" style={{ background: 'var(--teal-bright)', color: 'white' }}>
+          <Link href="/find-care" className="inline-flex items-center text-[17px] font-semibold px-9 py-4 rounded-full transition-all hover:-translate-y-0.5" style={{ background: 'var(--teal)', color: 'white' }}>
             Find a hospital near you →
           </Link>
         </div>
