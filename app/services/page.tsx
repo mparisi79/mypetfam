@@ -2,117 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import { BRANDS } from '@/lib/constants'
+import { SERVICE_GROUPS } from '@/lib/services'
+import ServiceCards from '@/components/ServiceCards'
 
 export const metadata: Metadata = {
   title: 'Services — MyPetfam',
   description:
     'A complete range of veterinary care — urgent, emergency, preventive, primary, specialty, and hospice. Learn about each level of care and find a provider.',
 }
-
-type ServiceTier = {
-  id: string
-  emoji: string
-  title: string
-  tagline: string
-  color: string
-  colorLight: string
-  bullets?: readonly string[]
-  longBody?: string
-}
-
-type ServiceGroup = {
-  id: string
-  kicker: string
-  heading: string
-  sub: string
-  tiers: readonly ServiceTier[]
-}
-
-const SERVICE_GROUPS: readonly ServiceGroup[] = [
-  {
-    id: 'immediate',
-    kicker: 'Immediate & unplanned',
-    heading: 'Immediate & unplanned care.',
-    sub: "For when something's wrong and can't wait.",
-    tiers: [
-      {
-        id: 'urgent',
-        emoji: '⏱️',
-        title: 'Urgent',
-        tagline: 'Same-day help for sudden issues.',
-        color: 'var(--gold)',
-        colorLight: 'var(--gold-light)',
-        bullets: ['Limping', 'Ear infections', 'Persistent vomiting'],
-      },
-      {
-        id: 'emergency',
-        emoji: '🚨',
-        title: 'Emergency',
-        tagline: 'Life-saving treatment when it counts.',
-        color: 'var(--coral)',
-        colorLight: 'var(--coral-light)',
-        bullets: ['Serious injuries', 'Breathing trouble', 'Unresponsiveness'],
-      },
-    ],
-  },
-  {
-    id: 'everyday',
-    kicker: 'Everyday & ongoing',
-    heading: 'Everyday & ongoing care.',
-    sub: 'For keeping pets healthy or managing regular health needs.',
-    tiers: [
-      {
-        id: 'preventive',
-        emoji: '💉',
-        title: 'Preventive',
-        tagline: 'Wellness visits to keep your pet thriving.',
-        color: 'var(--teal-dark)',
-        colorLight: 'var(--teal-light)',
-        bullets: ['Regular exams', 'Vaccinations', 'Health screenings', 'Virtual care'],
-      },
-      {
-        id: 'primary',
-        emoji: '🏥',
-        title: 'Primary',
-        tagline: 'Everyday medical care for your pet.',
-        color: 'var(--navy)',
-        colorLight: 'var(--teal-light)',
-        bullets: [
-          'Diagnosis and treatment for common illnesses',
-          'Minor surgery',
-          'Chronic conditions',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'specialized',
-    kicker: 'Specialized & advanced',
-    heading: 'Specialized & advanced care.',
-    sub: 'For complex, specific, or compassionate end-of-life situations.',
-    tiers: [
-      {
-        id: 'specialty',
-        emoji: '⭐',
-        title: 'Specialty',
-        tagline: 'Advanced expertise for complex needs.',
-        color: '#5B3FA0',
-        colorLight: '#F0EEFF',
-        bullets: ['Surgery', 'Oncology', 'Cardiology'],
-      },
-      {
-        id: 'hospice',
-        emoji: '🕊️',
-        title: 'Hospice',
-        tagline: "Comfort and compassion at life's end.",
-        color: 'var(--sage)',
-        colorLight: 'var(--sage-light)',
-        longBody:
-          'Gentle support, both in-hospital and in-home, focused on quality of life for pets with terminal or advanced illness.',
-      },
-    ],
-  },
-] as const
 
 export default function ServicesPage() {
   return (
@@ -151,7 +48,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
             {SERVICE_GROUPS.flatMap((g) => g.tiers).map((t) => (
-              <a
+              
                 key={t.id}
                 href={`#${t.id}`}
                 className="text-[13px] font-medium px-4 py-2 rounded-full border transition-all hover:-translate-y-0.5"
@@ -198,70 +95,7 @@ export default function ServicesPage() {
                 {group.sub}
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              {group.tiers.map((tier) => (
-                <div
-                  key={tier.id}
-                  id={tier.id}
-                  className="rounded-2xl p-8 border bg-white transition-all hover:-translate-y-1 hover:shadow-xl"
-                  style={{ borderColor: 'var(--gray-200)' }}
-                >
-                  <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5"
-                    style={{ background: tier.colorLight }}
-                  >
-                    {tier.emoji}
-                  </div>
-                  <h3
-                    className="font-serif text-[26px] mb-1.5 leading-tight"
-                    style={{ color: tier.color }}
-                  >
-                    {tier.title}
-                  </h3>
-                  <p
-                    className="text-[15px] font-medium mb-5 leading-[1.5]"
-                    style={{ color: 'var(--gray-800)' }}
-                  >
-                    {tier.tagline}
-                  </p>
-
-                  {tier.bullets && (
-                    <ul className="mb-6 space-y-2">
-                      {tier.bullets.map((b) => (
-                        <li
-                          key={b}
-                          className="flex items-start gap-2.5 text-[14px] leading-[1.6]"
-                          style={{ color: 'var(--gray-800)' }}
-                        >
-                          <span
-                            className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                            style={{ background: tier.color }}
-                          />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {tier.longBody && (
-                    <p
-                      className="text-[14px] leading-[1.7] mb-6"
-                      style={{ color: 'var(--gray-500)' }}
-                    >
-                      {tier.longBody}
-                    </p>
-                  )}
-
-                  <Link
-                    href="/find-care"
-                    className="inline-flex items-center gap-1.5 text-[13px] font-semibold"
-                    style={{ color: tier.color }}
-                  >
-                    Find {tier.title.toLowerCase()} care <span aria-hidden>→</span>
-                  </Link>
-                </div>
-              ))}
-            </div>
+            <ServiceCards tiers={group.tiers} />
           </div>
         </section>
       ))}
