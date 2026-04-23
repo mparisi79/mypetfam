@@ -55,7 +55,7 @@ export default function HowItWorksPage() {
           />
           <h1 className="font-serif text-[clamp(30px,4vw,52px)] text-white leading-[1.15] mb-5">
             Your pet's care follows them —<br />
-            <em className="not-italic" style={{ color: 'var(--teal-bright)' }}>wherever they go.</em>
+            <em className="not-italic" style={{ color: 'var(--teal)' }}>wherever they go.</em>
           </h1>
           <p className="text-[17px] font-light leading-[1.75] mx-auto" style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 620 }}>
             Our 2,000+ hospitals share your pet's health history so every vet they see is already up to speed.
@@ -86,7 +86,7 @@ export default function HowItWorksPage() {
           <div className="text-center mb-10">
             <span className="block text-[13px] italic mb-2" style={{ color: 'var(--gray-500)' }}>What else?</span>
             <h2 className="font-serif text-[40px]" style={{ color: 'var(--navy)' }}>
-              <span className="rounded px-3 py-0.5 text-white" style={{ background: 'var(--teal-bright)' }}>Good</span>{' '}to know
+              <span className="rounded px-3 py-0.5 text-white" style={{ background: 'var(--teal)' }}>Good</span>{' '}to know
             </h2>
           </div>
           <div className="grid grid-cols-3 gap-4">
@@ -133,7 +133,7 @@ export default function HowItWorksPage() {
                 <summary className="flex items-center gap-3 px-6 py-5 cursor-pointer list-none font-semibold text-[15px]" style={{ color: 'var(--navy)' }}>
                   <span className="text-base flex-shrink-0">{faq.icon}</span>
                   {faq.q}
-                  <span className="ml-auto w-6 h-6 rounded-full flex items-center justify-center text-lg flex-shrink-0 group-open:rotate-45 transition-transform" style={{ background: 'var(--teal-light)', color: 'var(--teal)' }}>+</span>
+                  <span className="ml-auto w-6 h-6 rounded-full flex items-center justify-center text-lg flex-shrink-0 group-open:rotate-45 transition-transform" style={{ background: 'var(--teal-light)', color: 'var(--teal-dark)' }}>+</span>
                 </summary>
                 <p className="px-6 pb-5 text-sm leading-[1.75]" style={{ color: 'var(--gray-500)', paddingLeft: 52 }}>{faq.a}</p>
               </details>
@@ -170,7 +170,7 @@ export default function HowItWorksPage() {
                 <div className="text-3xl mb-3.5">{r.icon}</div>
                 <h4 className="text-base font-bold mb-2" style={{ color: 'var(--navy)' }}>{r.title}</h4>
                 <p className="text-[13px] leading-[1.6] mb-4" style={{ color: 'var(--gray-500)' }}>{r.desc}</p>
-                <Link href={r.link} className="text-[13px] font-semibold" style={{ color: 'var(--teal)' }}>{r.label}</Link>
+                <Link href={r.link} className="text-[13px] font-semibold" style={{ color: 'var(--teal-dark)' }}>{r.label}</Link>
               </div>
             ))}
           </div>
