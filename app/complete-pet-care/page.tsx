@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const CARE_STAGES = [
   {
-    id: 'getting-started', emoji: '🐣', color: 'var(--teal)', colorLight: 'var(--teal-light)',
+    id: 'getting-started', emoji: '🐣', color: 'var(--teal-dark)', colorLight: 'var(--teal-light)',
     title: 'Getting Started', subtitle: 'New pet care & first visits',
     body: "Welcoming a new pet is one of life's great joys — and getting the first vet visit right sets the foundation for a lifetime of health. We help you establish care, understand your pet's baseline health, and build a relationship with a trusted vet team.",
     bullets: ['First wellness exam', 'Microchipping & registration', 'Parasite prevention', 'Puppy & kitten vaccination schedules'],
@@ -71,7 +71,7 @@ export default function CompletePetCarePage() {
           </p>
 
           <div className="relative flex mt-14">
-            <div className="absolute h-0.5 z-0" style={{ top: 40, left: 40, right: 40, background: 'linear-gradient(to right, var(--teal-bright), var(--gold), var(--coral))' }} />
+            <div className="absolute h-0.5 z-0" style={{ top: 40, left: 40, right: 40, background: 'linear-gradient(to right, var(--teal), var(--gold), var(--coral))' }} />
             {LIFECYCLE_STAGES.map((stage) => (
               <a key={stage.name} href={`#${stage.href.split('#')[1]}`} className="flex-1 flex flex-col items-center text-center relative z-10 px-2 group">
                 <div className="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 transition-all group-hover:scale-110" style={{ background: 'rgba(255,255,255,0.08)', border: '2px solid rgba(255,255,255,0.15)' }}>
