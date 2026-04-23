@@ -14,7 +14,7 @@ export default function OurBrandsPage() {
       <section style={{ background: 'var(--navy)' }} className="text-center px-8 py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% -20%, rgba(0,163,184,0.15) 0%, transparent 65%)' }} />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal-bright)' }}>
+          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal)' }}>
             Our Brands
           </span>
           <h1 className="font-serif text-[clamp(36px,5vw,60px)] text-white leading-[1.1] mb-5">
