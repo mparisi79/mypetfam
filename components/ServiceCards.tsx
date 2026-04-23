@@ -171,7 +171,57 @@ export default function ServiceCards({ tiers }: { tiers: readonly ServiceTier[] 
                     </section>
                   )}
 
-                  {/* What it covers (labeled details — Specialty disciplines) */}
+                  {/* What it covers — clustered layout (Specialty) */}
+                  {tier.clusters && tier.clusters.length > 0 && (
+                    <section>
+                      <h4
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase mb-3"
+                        style={{ color: 'var(--gray-500)' }}
+                      >
+                        What it covers
+                      </h4>
+                      {tier.includesIntro && (
+                        <p
+                          className="text-[14.5px] leading-[1.7] mb-5"
+                          style={{ color: 'var(--gray-800)' }}
+                        >
+                          {tier.includesIntro}
+                        </p>
+                      )}
+                      <div className="flex flex-col gap-5">
+                        {tier.clusters.map((cluster) => (
+                          <div key={cluster.name}>
+                            <h5
+                              className="text-[10.5px] font-semibold tracking-[0.12em] uppercase mb-2.5"
+                              style={{ color: 'var(--teal-dark)' }}
+                            >
+                              {cluster.name}
+                            </h5>
+                            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-3">
+                              {cluster.items.map((item) => (
+                                <div key={item.label}>
+                                  <dt
+                                    className="text-[14px] font-semibold leading-tight mb-0.5"
+                                    style={{ color: tier.color }}
+                                  >
+                                    {item.label}
+                                  </dt>
+                                  <dd
+                                    className="text-[13px] leading-[1.5]"
+                                    style={{ color: 'var(--gray-500)' }}
+                                  >
+                                    {item.desc}
+                                  </dd>
+                                </div>
+                              ))}
+                            </dl>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* What it covers — flat layout (kept for any tier still using the old shape) */}
                   {tier.includes && tier.includes.length > 0 && (
                     <section>
                       <h4
