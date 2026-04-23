@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const STORIES = [
   {
     emoji: '🩺', bg: 'var(--teal-light)',
-    tag: 'Medical Excellence', tagColor: 'var(--teal)', tagBg: 'var(--teal-light)',
+    tag: 'Medical Excellence', tagColor: 'var(--teal-dark)', tagBg: 'var(--teal-light)',
     title: 'When every second counted',
     body: "BluePearl's 24/7 emergency team and Banfield's shared health records meant Max got immediate, informed care — without repeating a single test.",
   },
@@ -27,7 +27,7 @@ const STORIES = [
   },
   {
     emoji: '🤝', bg: 'var(--teal-light)',
-    tag: 'How We Work Together', tagColor: 'var(--teal)', tagBg: 'var(--teal-light)',
+    tag: 'How We Work Together', tagColor: 'var(--teal-dark)', tagBg: 'var(--teal-light)',
     title: 'Behind the scenes: one record, every vet',
     body: "Our shared system means a specialist in another city already knows your pet's history before you walk through the door. Here's how it works.",
   },
@@ -50,7 +50,7 @@ export default function ConnectedCarePage() {
     <>
       <section style={{ background: 'var(--navy)' }} className="text-center px-8 py-20">
         <div className="max-w-3xl mx-auto">
-          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal-bright)' }}>
+          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal)' }}>
             Connected Care in Action
           </span>
           <h1 className="font-serif text-[clamp(36px,5vw,60px)] text-white leading-[1.1] mb-5">
