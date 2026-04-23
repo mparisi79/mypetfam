@@ -20,6 +20,7 @@ export const NAV_ITEMS = [
       { label: 'Veterinary Network', href: '/our-brands#network' },
       { divider: true },
       { label: 'Nutrition', href: '/nutrition' },
+      { label: 'Services', href: '/services' },
     ],
   },
   {
@@ -103,5 +104,6 @@ export const SEARCH_DATA = [
   { icon: '🔗', title: 'How Referrals Work',     sub: 'Connected care across our network',           href: '/how-it-works#referrals' },
   { icon: '🕊️', title: 'End of Life Care',      sub: 'Hospice & compassionate support',             href: '/complete-pet-care#end-of-life' },
   { icon: '🥩', title: 'Nutrition',              sub: 'Royal Canin partnership & diet guidance',     href: '/nutrition' },
+  { icon: '🩺', title: 'Services',               sub: 'Urgent, preventive, specialty & hospice care', href: '/services' },
   { icon: '❓', title: 'FAQs & Support',         sub: 'Common pet care questions answered',          href: '/how-it-works#faqs' },
 ] as const

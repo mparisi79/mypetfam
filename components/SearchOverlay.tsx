@@ -90,7 +90,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
                 <button
                   key={h}
                   onClick={() => setQuery(h)}
-                  className="text-[13px] font-medium px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-[var(--teal-light)] hover:text-[var(--teal)] transition-colors"
+                  className="text-[13px] font-medium px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-[var(--teal-light)] hover:text-[var(--teal-dark)] transition-colors"
                   style={{ color: 'var(--gray-800)' }}
                 >
                   {h}

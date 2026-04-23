@@ -70,7 +70,7 @@ export default function Nav() {
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive || isOpen
-                      ? 'text-[var(--teal)] bg-[var(--teal-light)]'
+                      ? 'text-[var(--teal-dark)] bg-[var(--teal-light)]'
                       : 'text-[var(--gray-800)] hover:bg-[var(--gray-100)] hover:text-[var(--navy)]'
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function Nav() {
                           key={j}
                           href={link.href}
                           onClick={() => setOpenIndex(null)}
-                          className="block text-[13.5px] px-3 py-2 rounded-xl hover:bg-[var(--teal-light)] hover:text-[var(--teal)] transition-all whitespace-nowrap"
+                          className="block text-[13.5px] px-3 py-2 rounded-xl hover:bg-[var(--teal-light)] hover:text-[var(--teal-dark)] transition-all whitespace-nowrap"
                           style={{ color: 'var(--gray-800)' }}
                         >
                           {link.label}
@@ -113,7 +113,7 @@ export default function Nav() {
           <div className="ml-auto flex items-center gap-3">
             <button
               onClick={() => setSearchOpen(true)}
-              className="w-9 h-9 rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all hover:border-[var(--teal)] hover:text-[var(--teal)] hover:bg-[var(--teal-light)]"
+              className="w-9 h-9 rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all hover:border-[var(--teal-dark)] hover:text-[var(--teal-dark)] hover:bg-[var(--teal-light)]"
               style={{ color: 'var(--gray-800)' }}
               aria-label="Search"
             >
@@ -124,7 +124,7 @@ export default function Nav() {
             </button>
             <Link
               href="/find-care"
-              className="text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors whitespace-nowrap hover:bg-[var(--teal)]"
+              className="text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors whitespace-nowrap hover:bg-[var(--teal-dark)]"
               style={{ background: 'var(--navy)' }}
             >
               Find Care

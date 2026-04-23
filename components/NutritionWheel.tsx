@@ -46,7 +46,7 @@ export default function NutritionWheel() {
                 height: 1,
                 transformOrigin: '0 0',
                 transform: `rotate(${deg}deg)`,
-                background: active === i ? 'var(--teal-bright)' : 'var(--gray-200)',
+                background: active === i ? 'var(--teal)' : 'var(--gray-200)',
               }}
             />
           )
@@ -84,7 +84,7 @@ export default function NutritionWheel() {
                 left: x,
                 top: y,
                 background: brand.bg,
-                borderColor: isActive ? 'var(--teal-bright)' : 'transparent',
+                borderColor: isActive ? 'var(--teal)' : 'transparent',
                 transform: isActive ? 'scale(1.15)' : 'scale(1)',
                 zIndex: isActive ? 3 : 1,
                 boxShadow: isActive ? '0 0 0 4px rgba(0,163,184,0.15)' : 'none',
@@ -95,7 +95,7 @@ export default function NutritionWheel() {
               <span className="text-[22px] mb-0.5">{brand.icon}</span>
               <span
                 className="text-[11px] font-medium text-center leading-tight transition-colors duration-300"
-                style={{ color: isActive ? 'var(--teal)' : 'var(--gray-800)' }}
+                style={{ color: isActive ? 'var(--teal-dark)' : 'var(--gray-800)' }}
               >
                 {brand.name}
               </span>
@@ -125,7 +125,7 @@ export default function NutritionWheel() {
             <p className="text-[13px] mt-1 leading-relaxed" style={{ color: 'var(--gray-500)' }}>
               {NUTRITION_BRANDS[active].desc}
             </p>
-            <p className="text-[12px] font-semibold mt-1.5" style={{ color: 'var(--teal)' }}>
+            <p className="text-[12px] font-semibold mt-1.5" style={{ color: 'var(--teal-dark)' }}>
               Explore {NUTRITION_BRANDS[active].name} →
             </p>
           </>
