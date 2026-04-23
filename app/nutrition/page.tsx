@@ -14,7 +14,7 @@ const CATEGORIES = [
     title: 'Veterinary diets',
     body: 'Clinically formulated recipes developed with veterinarians to manage specific health conditions — from kidney care to digestive support.',
     brands: 'Royal Canin',
-    color: 'var(--teal)',
+    color: 'var(--teal-dark)',
   },
   {
     icon: '🐕',
@@ -52,12 +52,12 @@ export default function NutritionPage() {
       <section style={{ background: 'var(--navy)' }} className="text-center px-8 py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% -20%, rgba(0,163,184,0.18) 0%, transparent 65%)' }} />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal-bright)' }}>
+          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal)' }}>
             Nutrition
           </span>
           <h1 className="font-serif text-[clamp(36px,5vw,56px)] text-white leading-[1.1] mb-5">
             The right food for every pet,<br />
-            <em className="not-italic" style={{ color: 'var(--teal-bright)' }}>at every stage.</em>
+            <em className="not-italic" style={{ color: 'var(--teal)' }}>at every stage.</em>
           </h1>
           <p className="text-[17px] font-light leading-[1.75] mx-auto" style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 620 }}>
             From everyday nutrition to specialized veterinary diets, Mars Pet Nutrition offers 11 trusted brands —
@@ -72,7 +72,7 @@ export default function NutritionPage() {
           <div className="text-center mb-6">
             <span className="block text-[13px] italic mb-2" style={{ color: 'var(--gray-500)' }}>Explore our brands</span>
             <h2 className="font-serif text-[40px]" style={{ color: 'var(--navy)' }}>
-              <span className="rounded px-3 py-0.5 text-white" style={{ background: 'var(--teal-bright)' }}>11</span>{' '}nutrition brands
+              <span className="rounded px-3 py-0.5 text-white" style={{ background: 'var(--teal)' }}>11</span>{' '}nutrition brands
             </h2>
             <p className="text-[15px] mt-3 mx-auto leading-relaxed" style={{ color: 'var(--gray-500)', maxWidth: 480 }}>
               Hover over any brand to learn more, or click to visit its page.
@@ -129,7 +129,7 @@ export default function NutritionPage() {
       </section>
 
       {/* Talk to your vet CTA */}
-      <section className="py-14 border-t-2" style={{ background: 'var(--teal-light)', borderColor: 'var(--teal-bright)' }}>
+      <section className="py-14 border-t-2" style={{ background: 'var(--teal-light)', borderColor: 'var(--teal)' }}>
         <div className="max-w-7xl mx-auto px-8 flex items-center gap-10">
           <Image
             src="https://www.mypetfam.com/_next/image?url=%2Fimages%2Flocation-module%2Ffallback-dog.png&w=640&q=85"
@@ -170,7 +170,7 @@ export default function NutritionPage() {
                 <div className="text-3xl mb-3.5">{r.icon}</div>
                 <h4 className="text-base font-bold mb-2" style={{ color: 'var(--navy)' }}>{r.title}</h4>
                 <p className="text-[13px] leading-[1.6] mb-4" style={{ color: 'var(--gray-500)' }}>{r.desc}</p>
-                <Link href={r.link} className="text-[13px] font-semibold" style={{ color: 'var(--teal)' }}>{r.label}</Link>
+                <Link href={r.link} className="text-[13px] font-semibold" style={{ color: 'var(--teal-dark)' }}>{r.label}</Link>
               </div>
             ))}
           </div>
