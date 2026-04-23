@@ -48,7 +48,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
             {SERVICE_GROUPS.flatMap((g) => g.tiers).map((t) => (
-              
+              <a
                 key={t.id}
                 href={`#${t.id}`}
                 className="text-[13px] font-medium px-4 py-2 rounded-full border transition-all hover:-translate-y-0.5"
