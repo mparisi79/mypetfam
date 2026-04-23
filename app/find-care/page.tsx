@@ -15,7 +15,7 @@ export default function FindCarePage() {
     <>
       <section style={{ background: 'var(--navy)' }} className="text-center px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal-bright)' }}>
+          <span className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block" style={{ color: 'var(--teal)' }}>
             Find Care
           </span>
           <h1 className="font-serif text-[clamp(36px,5vw,56px)] text-white leading-[1.1] mb-4">
@@ -47,7 +47,7 @@ export default function FindCarePage() {
                   />
                   <button
                     className="text-white rounded-xl px-5 text-xl hover:opacity-90 transition-opacity"
-                    style={{ background: 'var(--teal)' }}
+                    style={{ background: 'var(--teal-dark)' }}
                   >
                     →
                   </button>
@@ -59,9 +59,9 @@ export default function FindCarePage() {
                       onClick={() => setBrand(b)}
                       className="text-[13px] font-medium px-4 py-2 rounded-full border transition-all"
                       style={{
-                        borderColor: brand === b ? 'var(--teal)' : 'var(--gray-200)',
+                        borderColor: brand === b ? 'var(--teal-dark)' : 'var(--gray-200)',
                         background: brand === b ? 'var(--teal-light)' : 'white',
-                        color: brand === b ? 'var(--teal)' : 'var(--gray-800)',
+                        color: brand === b ? 'var(--teal-dark)' : 'var(--gray-800)',
                       }}
                     >
                       {b}
@@ -81,9 +81,9 @@ export default function FindCarePage() {
                       onClick={() => setCareType(t)}
                       className="text-[13px] font-medium px-4 py-2 rounded-full border transition-all"
                       style={{
-                        borderColor: careType === t ? 'var(--teal)' : 'var(--gray-200)',
+                        borderColor: careType === t ? 'var(--teal-dark)' : 'var(--gray-200)',
                         background: careType === t ? 'var(--teal-light)' : 'white',
-                        color: careType === t ? 'var(--teal)' : 'var(--gray-800)',
+                        color: careType === t ? 'var(--teal-dark)' : 'var(--gray-800)',
                       }}
                     >
                       {t}
