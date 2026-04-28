@@ -66,8 +66,8 @@ export default function NutritionPage() {
         </div>
       </section>
 
-      {/* Brand cards */}
-      <section className="bg-white py-20">
+      {/* Brand cards — alternating, mirrors /our-brands */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-12">
             <span className="block text-[13px] italic mb-2" style={{ color: 'var(--gray-500)' }}>Explore our brands</span>
@@ -78,29 +78,30 @@ export default function NutritionPage() {
               Each developed for a specific need — from veterinary diets to natural, high-protein recipes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-14">
             {NUTRITION_BRANDS.map((brand) => (
               <div
                 key={brand.slug}
-                className="rounded-2xl overflow-hidden border transition-all hover:shadow-2xl hover:-translate-y-0.5 flex flex-col"
+                className={`grid grid-cols-2 rounded-2xl overflow-hidden border transition-all hover:shadow-2xl hover:-translate-y-0.5 ${brand.reverse ? '[direction:rtl]' : ''}`}
                 style={{ borderColor: 'var(--gray-200)' }}
               >
                 <div
-                  className="flex items-center justify-center"
-                  style={{ background: brand.bg, height: 160 }}
+                  className={`relative h-[340px] flex items-center justify-center px-8 ${brand.reverse ? '[direction:ltr]' : ''}`}
+                  style={{ background: brand.bg }}
                 >
-                  <span className="text-[64px]" role="img" aria-label={brand.name}>{brand.icon}</span>
-                </div>
-                <div className="flex flex-col flex-1 p-7" style={{ background: 'var(--cream)' }}>
-                  <h3 className="font-serif text-[22px] mb-1 leading-tight" style={{ color: 'var(--navy)' }}>
+                  <span
+                    className="font-serif text-[clamp(40px,5vw,72px)] leading-none tracking-tight text-center"
+                    style={{ color: brand.wordmarkColor }}
+                  >
                     {brand.name}
-                  </h3>
-                  <p className="text-[13px] italic mb-3" style={{ color: 'var(--gray-500)' }}>
-                    {brand.type}
-                  </p>
-                  <p className="text-[14px] leading-[1.7] mb-6 flex-1" style={{ color: 'var(--gray-500)' }}>
-                    {brand.desc}
-                  </p>
+                  </span>
+                </div>
+                <div
+                  className={`flex flex-col justify-center p-12 ${brand.reverse ? '[direction:ltr]' : ''}`}
+                  style={{ background: 'var(--cream)' }}
+                >
+                  <h2 className="font-serif text-2xl mb-4" style={{ color: 'var(--navy)' }}>{brand.tagline}</h2>
+                  <p className="text-[15px] leading-[1.75] mb-7" style={{ color: 'var(--gray-500)' }}>{brand.desc}</p>
                   <Link
                     href={`/nutrition/${brand.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-semibold border-[1.5px] px-5 py-2.5 rounded-full transition-all hover:bg-[var(--navy)] hover:text-white w-fit"
