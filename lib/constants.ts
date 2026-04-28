@@ -84,17 +84,17 @@ export const BRANDS = [
 ] as const
 
 export const NUTRITION_BRANDS = [
-  { name: 'Royal Canin', slug: 'royal-canin', tagline: 'Health through nutrition, tailored to your pet', desc: 'Precise, science-backed nutrition tailored to breed, size, and health needs.', bg: '#FFF7ED', wordmarkColor: '#E2231A', reverse: false },
-  { name: 'Pedigree', slug: 'pedigree', tagline: 'Complete, balanced meals for every dog', desc: "The world's #1 dog food brand. Complete, balanced meals for happy, active dogs.", bg: '#FEFCE8', wordmarkColor: '#C8102E', reverse: true },
-  { name: 'Iams', slug: 'iams', tagline: 'Quality nutrition for lifelong vitality', desc: 'Quality ingredients for strong muscles, healthy skin, and lifelong vitality.', bg: '#EFF6FF', wordmarkColor: '#E2231A', reverse: false },
-  { name: 'Whiskas', slug: 'whiskas', tagline: 'Crafted to help every cat purr more', desc: 'Wet and dry recipes crafted to help all cats purr more, from kitten to adult.', bg: '#FDF2F8', wordmarkColor: '#5C2D91', reverse: true },
-  { name: 'Sheba', slug: 'sheba', tagline: 'Premium meals cats instinctively love', desc: 'Irresistibly crafted premium meals that cats instinctively love.', bg: '#FAF5FF', wordmarkColor: '#1A1A1A', reverse: false },
-  { name: 'Cesar', slug: 'cesar', tagline: 'Gourmet recipes made for small dogs', desc: 'Gourmet wet and dry food designed for the tastes and needs of small dogs.', bg: '#FFF7ED', wordmarkColor: '#1A1A1A', reverse: true },
-  { name: 'Nutro', slug: 'nutro', tagline: 'Clean, natural recipes with real protein', desc: 'Clean recipes with non-GMO ingredients and real protein sources.', bg: '#ECFDF5', wordmarkColor: '#1A4D1A', reverse: false },
-  { name: 'Eukanuba', slug: 'eukanuba', tagline: 'Performance nutrition for active dogs', desc: 'Performance-driven nutrition for active dogs and working breeds.', bg: '#EFF6FF', wordmarkColor: '#C8102E', reverse: true },
-  { name: 'Crave', slug: 'crave', tagline: 'High-protein meals inspired by ancestry', desc: 'High-protein, grain-free recipes inspired by the ancestral diet of dogs and cats.', bg: '#FEF2F2', wordmarkColor: '#1A1A1A', reverse: false },
-  { name: 'Orijen', slug: 'orijen', tagline: 'Whole-prey nutrition for peak vitality', desc: 'Whole-prey ratios with fresh, regional ingredients for peak nourishment.', bg: '#ECFDF5', wordmarkColor: '#5B2A1F', reverse: true },
-  { name: 'Acana', slug: 'acana', tagline: 'Wholesome recipes from regional ingredients', desc: 'Thoughtfully crafted with locally sourced ingredients pets were meant to eat.', bg: '#F0F9FF', wordmarkColor: '#002344', reverse: false },
+  { name: 'Royal Canin', slug: 'royal-canin', tagline: 'Health through nutrition, tailored to your pet', desc: 'Precise, science-backed nutrition tailored to breed, size, and health needs.', bg: '#FFF7ED', wordmarkColor: '#E2231A', reverse: false, pills: ['Vet diet'] },
+  { name: 'Pedigree', slug: 'pedigree', tagline: 'Complete, balanced meals for every dog', desc: "The world's #1 dog food brand. Complete, balanced meals for happy, active dogs.", bg: '#FEFCE8', wordmarkColor: '#C8102E', reverse: true, pills: ['Dog'] },
+  { name: 'Iams', slug: 'iams', tagline: 'Quality nutrition for lifelong vitality', desc: 'Quality ingredients for strong muscles, healthy skin, and lifelong vitality.', bg: '#EFF6FF', wordmarkColor: '#E2231A', reverse: false, pills: ['Dog', 'Cat'] },
+  { name: 'Whiskas', slug: 'whiskas', tagline: 'Crafted to help every cat purr more', desc: 'Wet and dry recipes crafted to help all cats purr more, from kitten to adult.', bg: '#FDF2F8', wordmarkColor: '#5C2D91', reverse: true, pills: ['Cat'] },
+  { name: 'Sheba', slug: 'sheba', tagline: 'Premium meals cats instinctively love', desc: 'Irresistibly crafted premium meals that cats instinctively love.', bg: '#FAF5FF', wordmarkColor: '#1A1A1A', reverse: false, pills: ['Cat', 'Premium'] },
+  { name: 'Cesar', slug: 'cesar', tagline: 'Gourmet recipes made for small dogs', desc: 'Gourmet wet and dry food designed for the tastes and needs of small dogs.', bg: '#FFF7ED', wordmarkColor: '#1A1A1A', reverse: true, pills: ['Dog', 'Small breed'] },
+  { name: 'Nutro', slug: 'nutro', tagline: 'Clean, natural recipes with real protein', desc: 'Clean recipes with non-GMO ingredients and real protein sources.', bg: '#ECFDF5', wordmarkColor: '#1A4D1A', reverse: false, pills: ['Natural'] },
+  { name: 'Eukanuba', slug: 'eukanuba', tagline: 'Performance nutrition for active dogs', desc: 'Performance-driven nutrition for active dogs and working breeds.', bg: '#EFF6FF', wordmarkColor: '#C8102E', reverse: true, pills: ['Dog', 'Premium'] },
+  { name: 'Crave', slug: 'crave', tagline: 'High-protein meals inspired by ancestry', desc: 'High-protein, grain-free recipes inspired by the ancestral diet of dogs and cats.', bg: '#FEF2F2', wordmarkColor: '#1A1A1A', reverse: false, pills: ['High-protein'] },
+  { name: 'Orijen', slug: 'orijen', tagline: 'Whole-prey nutrition for peak vitality', desc: 'Whole-prey ratios with fresh, regional ingredients for peak nourishment.', bg: '#ECFDF5', wordmarkColor: '#5B2A1F', reverse: true, pills: ['Premium', 'Natural'] },
+  { name: 'Acana', slug: 'acana', tagline: 'Wholesome recipes from regional ingredients', desc: 'Thoughtfully crafted with locally sourced ingredients pets were meant to eat.', bg: '#F0F9FF', wordmarkColor: '#002344', reverse: false, pills: ['Natural'] },
 ] as const
 
 export const LIFECYCLE_STAGES = [
