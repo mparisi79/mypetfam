@@ -64,14 +64,6 @@ export default function WhatIsMVHPage() {
               className="w-full block"
             >
               <source src="https://s1ud1orntopx1m9c.public.blob.vercel-storage.com/what-is-mvh.mp4" type="video/mp4" />
-              Your browser doesn&apos;t support embedded video.{' '}
-              
-                href="https://s1ud1orntopx1m9c.public.blob.vercel-storage.com/what-is-mvh.mp4"
-                style={{ color: 'var(--teal)' }}
-              >
-                Download the video
-              </a>{' '}
-              to view it.
             </video>
           </div>
         </div>
