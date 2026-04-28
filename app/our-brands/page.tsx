@@ -21,7 +21,7 @@ export default function OurBrandsPage() {
             Our vet care family.
           </h1>
           <p className="text-lg font-light leading-[1.7]" style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 600, margin: '0 auto' }}>
-            Mars Veterinary Health is a network of hospitals and pet-loving Associates spanning preventive,
+            <Link href="/our-brands/mars-veterinary-health" className="underline underline-offset-2 hover:text-white transition-colors">Mars Veterinary Health</Link> is a network of hospitals and pet-loving Associates spanning preventive,
             general, specialty, and emergency veterinary services. We deliver care like no other to millions
             of pets each year in clinics across North America.
           </p>
