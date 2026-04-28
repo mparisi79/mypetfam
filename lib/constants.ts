@@ -3,6 +3,8 @@ export const NAV_ITEMS = [
     label: 'How It Works',
     href: '/how-it-works',
     links: [
+      { label: 'Services', href: '/services' },
+      { divider: true },
       { label: 'What is the Mars Vet Health Network?', href: '/how-it-works/what-is-mars-veterinary-health' },
       { label: 'How care is connected', href: '/how-it-works/how-care-is-connected' },
       { label: 'How referrals work', href: '/how-it-works/how-referrals-work' },
@@ -20,7 +22,6 @@ export const NAV_ITEMS = [
       { label: 'Veterinary Network', href: '/our-brands#network' },
       { divider: true },
       { label: 'Nutrition', href: '/nutrition' },
-      { label: 'Services', href: '/services' },
     ],
   },
   {
