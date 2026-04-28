@@ -49,7 +49,35 @@ export default function WhatIsMVHPage() {
         </div>
       </section>
 
-      {/* Section 3 — Backed by 90 Years of Caring for Pets */}
+      {/* Section 3 — Video */}
+      <section className="py-20 relative overflow-hidden" style={{ background: 'var(--navy)' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,163,184,0.15) 0%, transparent 70%)' }} />
+        <div className="relative z-10 max-w-4xl mx-auto px-8">
+          <div
+            className="rounded-2xl overflow-hidden"
+            style={{ boxShadow: '0 0 0 1px rgba(0,163,184,0.25), 0 20px 60px rgba(0,163,184,0.18)' }}
+          >
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              className="w-full block"
+            >
+              <source src="https://s1ud1orntopx1m9c.public.blob.vercel-storage.com/what-is-mvh.mp4" type="video/mp4" />
+              Your browser doesn&apos;t support embedded video.{' '}
+              
+                href="https://s1ud1orntopx1m9c.public.blob.vercel-storage.com/what-is-mvh.mp4"
+                style={{ color: 'var(--teal)' }}
+              >
+                Download the video
+              </a>{' '}
+              to view it.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 — Backed by 90 Years of Caring for Pets */}
       <section className="py-20" style={{ background: 'var(--cream)' }}>
         <div className="max-w-3xl mx-auto px-8">
           <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-6 leading-[1.2]" style={{ color: 'var(--navy)' }}>
@@ -64,7 +92,7 @@ export default function WhatIsMVHPage() {
         </div>
       </section>
 
-      {/* Section 4 — Connected Care Built for Your Pet's Whole Life */}
+      {/* Section 5 — Connected Care Built for Your Pet's Whole Life */}
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-8">
           <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-6 leading-[1.2]" style={{ color: 'var(--navy)' }}>
@@ -79,7 +107,7 @@ export default function WhatIsMVHPage() {
         </div>
       </section>
 
-      {/* Section 5 — By the Numbers */}
+      {/* Section 6 — By the Numbers */}
       <section className="py-20" style={{ background: 'var(--cream)' }}>
         <div className="max-w-7xl mx-auto px-8">
           <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-10 leading-[1.2] text-center" style={{ color: 'var(--navy)' }}>
@@ -104,7 +132,7 @@ export default function WhatIsMVHPage() {
         </div>
       </section>
 
-      {/* Section 6 — A Better World For Pets */}
+      {/* Section 7 — A Better World For Pets */}
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-8">
           <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-6 leading-[1.2]" style={{ color: 'var(--navy)' }}>
