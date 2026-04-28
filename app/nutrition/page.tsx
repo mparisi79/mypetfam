@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import NutritionWheel from '@/components/NutritionWheel'
+import { NUTRITION_BRANDS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Nutrition — MyPetfam',
@@ -66,19 +66,52 @@ export default function NutritionPage() {
         </div>
       </section>
 
-      {/* Brand Wheel */}
+      {/* Brand cards */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-6">
+          <div className="text-center mb-12">
             <span className="block text-[13px] italic mb-2" style={{ color: 'var(--gray-500)' }}>Explore our brands</span>
             <h2 className="font-serif text-[40px]" style={{ color: 'var(--navy)' }}>
               <span className="rounded px-3 py-0.5 text-white" style={{ background: 'var(--teal)' }}>11</span>{' '}nutrition brands
             </h2>
             <p className="text-[15px] mt-3 mx-auto leading-relaxed" style={{ color: 'var(--gray-500)', maxWidth: 480 }}>
-              Hover over any brand to learn more, or click to visit its page.
+              Each developed for a specific need — from veterinary diets to natural, high-protein recipes.
             </p>
           </div>
-          <NutritionWheel />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {NUTRITION_BRANDS.map((brand) => (
+              <div
+                key={brand.slug}
+                className="rounded-2xl overflow-hidden border transition-all hover:shadow-2xl hover:-translate-y-0.5 flex flex-col"
+                style={{ borderColor: 'var(--gray-200)' }}
+              >
+                <div
+                  className="flex items-center justify-center"
+                  style={{ background: brand.bg, height: 160 }}
+                >
+                  <span className="text-[64px]" role="img" aria-label={brand.name}>{brand.icon}</span>
+                </div>
+                <div className="flex flex-col flex-1 p-7" style={{ background: 'var(--cream)' }}>
+                  <h3 className="font-serif text-[22px] mb-1 leading-tight" style={{ color: 'var(--navy)' }}>
+                    {brand.name}
+                  </h3>
+                  <p className="text-[13px] italic mb-3" style={{ color: 'var(--gray-500)' }}>
+                    {brand.type}
+                  </p>
+                  <p className="text-[14px] leading-[1.7] mb-6 flex-1" style={{ color: 'var(--gray-500)' }}>
+                    {brand.desc}
+                  </p>
+                  <Link
+                    href={`/nutrition/${brand.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold border-[1.5px] px-5 py-2.5 rounded-full transition-all hover:bg-[var(--navy)] hover:text-white w-fit"
+                    style={{ color: 'var(--navy)', borderColor: 'var(--navy)' }}
+                  >
+                    See Products →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
