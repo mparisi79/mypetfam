@@ -8,37 +8,6 @@ export const metadata: Metadata = {
   description: 'Explore 11 trusted Mars pet nutrition brands — from veterinary diets to premium whole-prey recipes.',
 }
 
-const CATEGORIES = [
-  {
-    icon: '🩺',
-    title: 'Veterinary diets',
-    body: 'Clinically formulated recipes developed with veterinarians to manage specific health conditions — from kidney care to digestive support.',
-    brands: 'Royal Canin',
-    color: 'var(--teal-dark)',
-  },
-  {
-    icon: '🐕',
-    title: 'Everyday dog nutrition',
-    body: 'Complete and balanced meals for every breed, size, and life stage — from puppy to senior.',
-    brands: 'Pedigree, Iams, Cesar, Eukanuba',
-    color: 'var(--navy)',
-  },
-  {
-    icon: '🐱',
-    title: 'Cat nutrition',
-    body: 'Wet, dry, and premium recipes crafted to meet the unique dietary needs of cats and kittens.',
-    brands: 'Whiskas, Sheba, Iams',
-    color: 'var(--coral)',
-  },
-  {
-    icon: '🌿',
-    title: 'Natural & high-protein',
-    body: 'Clean-label, grain-free, and ancestral-diet-inspired recipes using real meat and whole ingredients.',
-    brands: 'Nutro, Crave, Orijen, Acana',
-    color: 'var(--sage)',
-  },
-]
-
 const WHY_ITEMS = [
   { icon: '🔬', title: 'Backed by Waltham', body: 'Every Mars nutrition brand is guided by research from the Waltham Petcare Science Institute — 60+ years of advancing pet health through science.' },
   { icon: '🤝', title: 'Vet-connected', body: 'Our nutrition brands work hand-in-hand with the Mars Veterinary Health network. Your vet can recommend the right diet as part of your pet\'s care plan.' },
@@ -100,7 +69,18 @@ export default function NutritionPage() {
                   className={`flex flex-col justify-center p-12 ${brand.reverse ? '[direction:ltr]' : ''}`}
                   style={{ background: 'var(--cream)' }}
                 >
-                  <h2 className="font-serif text-2xl mb-4" style={{ color: 'var(--navy)' }}>{brand.tagline}</h2>
+                  <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--navy)' }}>{brand.tagline}</h2>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {brand.pills.map((pill) => (
+                      <span
+                        key={pill}
+                        className="text-[11px] font-semibold px-3 py-1 rounded-full"
+                        style={{ background: 'var(--gray-100)', color: 'var(--gray-800)' }}
+                      >
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
                   <p className="text-[15px] leading-[1.75] mb-7" style={{ color: 'var(--gray-500)' }}>{brand.desc}</p>
                   <Link
                     href={`/nutrition/${brand.slug}`}
@@ -110,32 +90,6 @@ export default function NutritionPage() {
                     See Products →
                   </Link>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="py-20" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-[36px]" style={{ color: 'var(--navy)' }}>Nutrition by category</h2>
-            <p className="text-[15px] mt-2" style={{ color: 'var(--gray-500)' }}>Every pet has different needs. We have a brand for each.</p>
-          </div>
-          <div className="grid grid-cols-2 gap-5">
-            {CATEGORIES.map((cat) => (
-              <div
-                key={cat.title}
-                className="rounded-2xl p-8 border transition-all hover:-translate-y-0.5 hover:shadow-md bg-white"
-                style={{ borderColor: 'var(--gray-200)' }}
-              >
-                <div className="text-3xl mb-4">{cat.icon}</div>
-                <h3 className="font-serif text-[22px] mb-2.5 leading-tight" style={{ color: cat.color }}>{cat.title}</h3>
-                <p className="text-[14px] leading-[1.7] mb-4" style={{ color: 'var(--gray-500)' }}>{cat.body}</p>
-                <p className="text-[12px] font-semibold tracking-wide uppercase" style={{ color: 'var(--gray-800)' }}>
-                  {cat.brands}
-                </p>
               </div>
             ))}
           </div>
