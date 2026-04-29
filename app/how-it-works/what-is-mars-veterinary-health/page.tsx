@@ -37,21 +37,8 @@ export default function WhatIsMVHPage() {
         </div>
       </section>
 
-      {/* Section 2 — What It Is */}
-      <section className="bg-white py-20">
-        <div className="max-w-3xl mx-auto px-8">
-          <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-6 leading-[1.2]" style={{ color: 'var(--navy)' }}>
-            What it is
-          </h2>
-          <p className="text-base leading-[1.8]" style={{ color: 'var(--gray-500)' }}>
-            Mars Veterinary Health, or MVH for short, is a connected network of veterinary brands working together so your pet has access to the right care, in the right place, at every age and stage of life. In the United States, the network includes Banfield Pet Hospital for preventive and primary care, BluePearl Pet Hospital for specialty and 24/7 emergency care, and VCA Animal Hospitals for primary, urgent, specialty, and emergency care. Together, these three brands operate more than 2,000 hospitals nationwide and employ more than 8,300 veterinarians across 21+ specialty areas. They are united by a single Purpose: A Better World For Pets.
-          </p>
-        </div>
-      </section>
-
-      {/* Section 3 — Video */}
-      <section className="py-20 relative overflow-hidden" style={{ background: 'var(--navy)' }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,163,184,0.15) 0%, transparent 70%)' }} />
+      {/* Section 2 — Video */}
+      <section className="pb-20 pt-4 relative overflow-hidden" style={{ background: 'var(--navy)' }}>
         <div className="relative z-10 max-w-4xl mx-auto px-8">
           <div
             className="rounded-2xl overflow-hidden"
@@ -66,6 +53,18 @@ export default function WhatIsMVHPage() {
               <source src="https://s1ud1orntopx1m9c.public.blob.vercel-storage.com/what-is-mvh.mp4" type="video/mp4" />
             </video>
           </div>
+        </div>
+      </section>
+
+      {/* Section 3 — What It Is */}
+      <section className="bg-white py-20">
+        <div className="max-w-3xl mx-auto px-8">
+          <h2 className="font-serif text-[clamp(26px,3vw,38px)] mb-6 leading-[1.2]" style={{ color: 'var(--navy)' }}>
+            What it is
+          </h2>
+          <p className="text-base leading-[1.8]" style={{ color: 'var(--gray-500)' }}>
+            Mars Veterinary Health, or MVH for short, is a connected network of veterinary brands working together so your pet has access to the right care, in the right place, at every age and stage of life. In the United States, the network includes Banfield Pet Hospital for preventive and primary care, BluePearl Pet Hospital for specialty and 24/7 emergency care, and VCA Animal Hospitals for primary, urgent, specialty, and emergency care. Together, these three brands operate more than 2,000 hospitals nationwide and employ more than 8,300 veterinarians across 21+ specialty areas. They are united by a single Purpose: A Better World For Pets.
+          </p>
         </div>
       </section>
 
