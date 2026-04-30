@@ -28,11 +28,11 @@ export default function ServicesPage() {
         />
         <div className="relative z-10 max-w-3xl mx-auto">
           <span
-            className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block"
-            style={{ color: 'var(--teal)' }}
-          >
-            Services
-          </span>
+  className="text-xs font-semibold tracking-[0.1em] uppercase mb-4 block"
+  style={{ color: 'var(--teal)' }}
+>
+  Our Services
+</span>
           <h1 className="font-serif text-[clamp(36px,5vw,56px)] text-white leading-[1.1] mb-5">
             A complete range of{' '}
             <em className="not-italic" style={{ color: 'var(--teal)' }}>
