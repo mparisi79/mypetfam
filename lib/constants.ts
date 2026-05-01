@@ -2,16 +2,12 @@ export const NAV_ITEMS = [
   {
     label: 'How It Works',
     href: '/how-it-works',
-    links: [
-      { label: 'Services', href: '/services' },
-      { divider: true },
-      { label: 'What is the Mars Vet Health Network?', href: '/how-it-works/what-is-mars-veterinary-health' },
-      { label: 'How care is connected', href: '/how-it-works/how-care-is-connected' },
-      { label: 'How referrals work', href: '/how-it-works/how-referrals-work' },
-      { label: 'What to expect as a pet parent', href: '/how-it-works/what-to-expect' },
-      { divider: true },
-      { label: 'FAQs', href: '/how-it-works' },
-      { label: 'Help & Support', href: '/how-it-works' },
+ links: [
+      { label: 'What is the Mars Veterinary Health Network?', href: '/how-it-works/what-is-mars-veterinary-health' },
+      { label: 'Our Services', href: '/services' },
+      { label: 'How Referrals Work', href: '/how-it-works/how-referrals-work' },
+      { label: 'What to Expect as a Pet Parent', href: '/how-it-works/what-to-expect' },
+      { label: 'How Care Is Connected', href: '/how-it-works/how-care-is-connected' },
     ],
   },
   {
