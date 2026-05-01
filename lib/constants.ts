@@ -2,12 +2,15 @@ export const NAV_ITEMS = [
   {
     label: 'How It Works',
     href: '/how-it-works',
- links: [
+    links: [
       { label: 'What is the Mars Veterinary Health Network?', href: '/how-it-works/what-is-mars-veterinary-health' },
       { label: 'Our Services', href: '/services' },
       { label: 'How Referrals Work', href: '/how-it-works/how-referrals-work' },
       { label: 'What to Expect as a Pet Parent', href: '/how-it-works/what-to-expect' },
       { label: 'How Care Is Connected', href: '/how-it-works/how-care-is-connected' },
+      { divider: true },
+      { label: 'FAQs', href: '/how-it-works' },
+      { label: 'Help & Support', href: '/how-it-works' },
     ],
   },
   {
@@ -113,12 +116,12 @@ export const SEARCH_DATA = [
   { icon: '💙', title: 'BluePearl Pet Hospital', sub: 'Emergency & specialty, 24/7',                 href: '/our-brands' },
   { icon: '🔴', title: 'VCA Animal Hospitals',   sub: 'Comprehensive care, nationwide',              href: '/our-brands' },
   { icon: '🏥', title: 'Mars Veterinary Health', sub: 'The umbrella network behind our brands',      href: '/our-brands/mars-veterinary-health' },
-  { icon: '📖', title: 'What is MVH?',           sub: 'Backed by 90 years of caring for pets',       href: '/how-it-works/what-is-mars-veterinary-health' },
-  { icon: '🔗', title: 'How care is connected',  sub: 'Shared records across the network',           href: '/how-it-works/how-care-is-connected' },
-  { icon: '↗',  title: 'How referrals work',     sub: 'From primary care to specialty and back',     href: '/how-it-works/how-referrals-work' },
-  { icon: '👋', title: 'What to expect',         sub: 'Your first visit and beyond',                 href: '/how-it-works/what-to-expect' },
+  { icon: '📖', title: 'What is the Mars Veterinary Health Network?', sub: 'Backed by 90 years of caring for pets', href: '/how-it-works/what-is-mars-veterinary-health' },
+  { icon: '🔗', title: 'How Care Is Connected',  sub: 'Shared records across the network',           href: '/how-it-works/how-care-is-connected' },
+  { icon: '↗',  title: 'How Referrals Work',     sub: 'From primary care to specialty and back',     href: '/how-it-works/how-referrals-work' },
+  { icon: '👋', title: 'What to Expect as a Pet Parent', sub: 'Your first visit and beyond',         href: '/how-it-works/what-to-expect' },
   { icon: '🕊️', title: 'End of Life Care',      sub: 'Hospice & compassionate support',             href: '/complete-pet-care#end-of-life' },
   { icon: '🥩', title: 'Nutrition',              sub: 'Royal Canin partnership & diet guidance',     href: '/nutrition' },
-  { icon: '🩺', title: 'Services',               sub: 'Urgent, preventive, specialty & hospice care', href: '/services' },
+  { icon: '🩺', title: 'Our Services',           sub: 'Urgent, preventive, specialty & hospice care', href: '/services' },
   { icon: '❓', title: 'FAQs & Support',         sub: 'Common pet care questions answered',          href: '/how-it-works' },
 ] as const
