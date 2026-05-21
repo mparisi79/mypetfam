@@ -14,6 +14,21 @@ const WHY_ITEMS = [
   { icon: '🌍', title: 'Trusted worldwide', body: 'Mars Pet Nutrition feeds half the world\'s pets. From everyday meals to specialized veterinary diets, our brands serve pets in over 130 countries.' },
 ]
 
+// Which species each brand serves. 'both' shows two CTAs side by side.
+const SPECIES_BY_BRAND: Record<string, 'dog' | 'cat' | 'both'> = {
+  'royal-canin': 'both',
+  'pedigree': 'dog',
+  'iams': 'both',
+  'whiskas': 'cat',
+  'sheba': 'cat',
+  'cesar': 'dog',
+  'nutro': 'both',
+  'eukanuba': 'dog',
+  'crave': 'both',
+  'orijen': 'both',
+  'acana': 'both',
+}
+
 export default function NutritionPage() {
   return (
     <>
@@ -48,50 +63,68 @@ export default function NutritionPage() {
             </p>
           </div>
           <div className="flex flex-col gap-14">
-            {NUTRITION_BRANDS.map((brand) => (
-              <div
-                key={brand.slug}
-                className={`grid grid-cols-2 rounded-2xl overflow-hidden border transition-all hover:shadow-2xl hover:-translate-y-0.5 ${brand.reverse ? '[direction:rtl]' : ''}`}
-                style={{ borderColor: 'var(--gray-200)' }}
-              >
+            {NUTRITION_BRANDS.map((brand) => {
+              const species = SPECIES_BY_BRAND[brand.slug] ?? 'both'
+              const showDog = species === 'dog' || species === 'both'
+              const showCat = species === 'cat' || species === 'both'
+              return (
                 <div
-                  className={`relative h-[340px] flex items-center justify-center px-8 ${brand.reverse ? '[direction:ltr]' : ''}`}
-                  style={{ background: brand.bg }}
+                  key={brand.slug}
+                  className={`grid grid-cols-2 rounded-2xl overflow-hidden border transition-all hover:shadow-2xl hover:-translate-y-0.5 ${brand.reverse ? '[direction:rtl]' : ''}`}
+                  style={{ borderColor: 'var(--gray-200)' }}
                 >
-                  <span
-                    className="font-serif text-[clamp(40px,5vw,72px)] leading-none tracking-tight text-center"
-                    style={{ color: brand.wordmarkColor }}
+                  <div
+                    className={`relative h-[340px] flex items-center justify-center px-8 ${brand.reverse ? '[direction:ltr]' : ''}`}
+                    style={{ background: brand.bg }}
                   >
-                    {brand.name}
-                  </span>
-                </div>
-                <div
-                  className={`flex flex-col justify-center p-12 ${brand.reverse ? '[direction:ltr]' : ''}`}
-                  style={{ background: 'var(--cream)' }}
-                >
-                  <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--navy)' }}>{brand.tagline}</h2>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {brand.pills.map((pill) => (
-                      <span
-                        key={pill}
-                        className="text-[11px] font-semibold px-3 py-1 rounded-full"
-                        style={{ background: 'var(--gray-100)', color: 'var(--gray-800)' }}
-                      >
-                        {pill}
-                      </span>
-                    ))}
+                    <span
+                      className="font-serif text-[clamp(40px,5vw,72px)] leading-none tracking-tight text-center"
+                      style={{ color: brand.wordmarkColor }}
+                    >
+                      {brand.name}
+                    </span>
                   </div>
-                  <p className="text-[15px] leading-[1.75] mb-7" style={{ color: 'var(--gray-500)' }}>{brand.desc}</p>
-                  <Link
-                    href={`/nutrition/${brand.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-semibold border-[1.5px] px-5 py-2.5 rounded-full transition-all hover:bg-[var(--navy)] hover:text-white w-fit"
-                    style={{ color: 'var(--navy)', borderColor: 'var(--navy)' }}
+                  <div
+                    className={`flex flex-col justify-center p-12 ${brand.reverse ? '[direction:ltr]' : ''}`}
+                    style={{ background: 'var(--cream)' }}
                   >
-                    See Products →
-                  </Link>
+                    <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--navy)' }}>{brand.tagline}</h2>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {brand.pills.map((pill) => (
+                        <span
+                          key={pill}
+                          className="text-[11px] font-semibold px-3 py-1 rounded-full"
+                          style={{ background: 'var(--gray-100)', color: 'var(--gray-800)' }}
+                        >
+                          {pill}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-[15px] leading-[1.75] mb-7" style={{ color: 'var(--gray-500)' }}>{brand.desc}</p>
+                    <div className="flex flex-wrap gap-3">
+                      {showDog && (
+                        <Link
+                          href={`/nutrition/${brand.slug}?species=dog`}
+                          className="inline-flex items-center gap-2 text-sm font-semibold border-[1.5px] px-5 py-2.5 rounded-full transition-all hover:bg-[var(--navy)] hover:text-white w-fit"
+                          style={{ color: 'var(--navy)', borderColor: 'var(--navy)' }}
+                        >
+                          See Dog Products →
+                        </Link>
+                      )}
+                      {showCat && (
+                        <Link
+                          href={`/nutrition/${brand.slug}?species=cat`}
+                          className="inline-flex items-center gap-2 text-sm font-semibold border-[1.5px] px-5 py-2.5 rounded-full transition-all hover:bg-[var(--navy)] hover:text-white w-fit"
+                          style={{ color: 'var(--navy)', borderColor: 'var(--navy)' }}
+                        >
+                          See Cat Products →
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
